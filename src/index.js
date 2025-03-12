@@ -27,11 +27,11 @@
  *
  * @system
  *
- * generated_on: 2025-03-12T19:54:32.295Z
+ * generated_on: 2025-03-12T20:09:58.203Z
  * certified_version: 1.0.0
  * file_uuid: b5117350-6317-4730-a01b-bd604126e859
- * file_size: 1712 bytes
- * file_hash: 75a55d08068df7995c235ac5ea3a16295e565c83537505485690e2c84c3ca230
+ * file_size: 1709 bytes
+ * file_hash: c4ef159475b72c71705ee64451b325e04fcd751e51d8135246c149e08c3ecf03
  * mast_hash: da4ba2bb160a1db02516c13707144c0098648cfc9cb3777259f7ef2ec773a6ca
  * generated_by: preamble on npm!
  *
@@ -44,7 +44,7 @@ export async function glob(patterns, options = {}) {
     return fg(patterns, options);
 }
 
-export async function sweep(dir, patterns = '**/*', options = {}) {
+export async function sweep(dir, patterns = '*', options = {}) {
     const { ...restOptions } = options;
 
     const files = await fg(patterns, {

@@ -27,11 +27,11 @@
  *  
  * @system
  *
- * generated_on: 2025-03-12T19:57:45.577Z
+ * generated_on: 2025-03-12T20:10:32.966Z
  * certified_version: 1.0.0
  * file_uuid: b5117350-6317-4730-a01b-bd604126e859
- * file_size: 3457 bytes
- * file_hash: 87e8f6935a530a32682751142ac0b1c543b64ae3bc3392a7637fc7743bc21e82
+ * file_size: 3454 bytes
+ * file_hash: 5131e8e23f4078e68cffb05c83456864527cc1b623e4435c493a034ab078d73a
  * mast_hash: 7b56f03bafa02594c806b48a3114faee05abf5e48ebc0e39f56f1331625b8fee
  * generated_by: preamble on npm!
  *
@@ -77,7 +77,7 @@ var import_fast_glob = __toESM(require("fast-glob"), 1);
 async function glob(patterns, options = {}) {
   return (0, import_fast_glob.default)(patterns, options);
 }
-async function sweep(dir, patterns = "**/*", options = {}) {
+async function sweep(dir, patterns = "*", options = {}) {
   const { ...restOptions } = options;
   const files = await (0, import_fast_glob.default)(patterns, {
     cwd: dir,
