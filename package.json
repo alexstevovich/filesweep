@@ -1,7 +1,7 @@
 {
     "name": "filesweep",
-    "version": "1.0.0",
-    "description": "A minimal alternative to glob that returns full file paths, eliminating redundant path.join operations.",
+    "version": "1.0.2",
+    "description": "An alternate glob that returns full file paths, eliminating redundant path.join operations.",
     "exports": {
         "import": "./src/index.js",
         "require": "./gen/index.cjs"

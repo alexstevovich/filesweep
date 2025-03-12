@@ -1,3 +1,4 @@
+
 # filesweep
 
 **filesweep** is a streamlined alternative to `glob`, designed to return immediately useful file paths without extra `path.join` operations. By appending full file paths directly to the provided directory, it enhances **semantic clarity** and reduces boilerplate in most common file-handling tasks.
@@ -12,9 +13,12 @@
 import sweep from 'filesweep';
 
 const files = await sweep('./');
-
 console.log(files);
-//['./LICENSE,./README.md, ...etc]
+// ['./LICENSE', './README.md', ...etc]
+
+const filesByExt = await sweep('./','**/*.md');
+console.log(filesByExt);
+// ['./README.md']
 ```
 
 ## API
