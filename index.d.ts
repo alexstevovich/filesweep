@@ -1,4 +1,4 @@
-declare module 'filesweep' {
+declare module 'sweepdir' {
     /**
      * Performs a glob search and returns the matched files.
      *
@@ -19,12 +19,12 @@ declare module 'filesweep' {
      * @param options - Optional fast-glob options.
      * @returns A promise that resolves to an array of full file paths.
      */
-    export function sweep(
+    export function sweepDir(
         dir: string,
         patterns?: string | string[],
         options?: Record<string, any>,
     ): Promise<string[]>;
 
-    const _default: typeof sweep;
+    const _default: typeof sweepDir;
     export default _default;
 }

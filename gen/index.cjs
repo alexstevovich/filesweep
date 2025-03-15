@@ -1,5 +1,5 @@
 /* *******************************************************
- * filesweep
+ * sweepdir
  * 
  * @license
  * 
@@ -21,18 +21,18 @@
  * 
  * @meta
  *
- * package_name: filesweep
+ * package_name: sweepdir
  * file_name: gen/index.cjs
  * purpose: Core functionality and exports combined.
  *  
  * @system
  *
- * generated_on: 2025-03-12T20:10:32.966Z
+ * generated_on: 2025-03-15T02:00:38.497Z
  * certified_version: 1.0.0
  * file_uuid: b5117350-6317-4730-a01b-bd604126e859
- * file_size: 3454 bytes
- * file_hash: 5131e8e23f4078e68cffb05c83456864527cc1b623e4435c493a034ab078d73a
- * mast_hash: 7b56f03bafa02594c806b48a3114faee05abf5e48ebc0e39f56f1331625b8fee
+ * file_size: 3332 bytes
+ * file_hash: 969cd726ea4883d6928b1a384114e8375198268331f8f13bd9ff3e622b00954f
+ * mast_hash: df5f004204cc577ca1594e996d6a5d361517adf12fdc79154a5793058914fd30
  * generated_by: preamble on npm!
  *
  * [Preamble Metadata]
@@ -67,17 +67,13 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 var index_exports = {};
 __export(index_exports, {
   default: () => index_default,
-  glob: () => glob,
-  sweep: () => sweep
+  sweepDir: () => sweepDir
 });
 module.exports = __toCommonJS(index_exports);
 var import_path = __toESM(require("path"), 1);
 var import_fast_glob = __toESM(require("fast-glob"), 1);
 
-async function glob(patterns, options = {}) {
-  return (0, import_fast_glob.default)(patterns, options);
-}
-async function sweep(dir, patterns = "*", options = {}) {
+async function sweepDir(dir, patterns = "*", options = {}) {
   const { ...restOptions } = options;
   const files = await (0, import_fast_glob.default)(patterns, {
     cwd: dir,
@@ -86,9 +82,8 @@ async function sweep(dir, patterns = "*", options = {}) {
   });
   return files.map((file) => import_path.default.join(dir, file));
 }
-var index_default = sweep;
+var index_default = sweepDir;
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
-  glob,
-  sweep
+  sweepDir
 });

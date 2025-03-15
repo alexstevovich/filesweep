@@ -1,43 +1,40 @@
+# sweepdir
 
-# filesweep
+> **Archetype:** Node.js package
 
-**filesweep** is a streamlined alternative to `glob`, designed to return immediately useful file paths without extra `path.join` operations. By appending full file paths directly to the provided directory, it enhances **semantic clarity** and reduces boilerplate in most common file-handling tasks.
+**sweepdir** is a streamlined alternative to `glob`, designed to return immediately useful file paths without extra `path.join` operations. By appending full file paths directly to the provided directory, it enhances **semantic clarity** and reduces boilerplate in most common file-handling tasks.
 
 ## Install
 
-`npm install filesweep`
+`npm install sweepdir`
 
 ## Usage
 
 ```js
-import sweep from 'filesweep';
+import sweepDir from 'sweepdir';
 
-const files = await sweep('./');
+const files = await sweepDir('./');
 console.log(files);
 // ['./LICENSE', './README.md', ...etc]
 
-const filesByExt = await sweep('./','**/*.md');
+const filesByExt = await sweepDir('./', '**/*.md');
 console.log(filesByExt);
 // ['./README.md']
 ```
 
 ## API
 
-### sweep() (Default)
+### sweepDir() (Default)
 
-**`sweep()`** is designed as a **semantic alternative to `glob()`**, differentiating itself by returning full file paths. This eliminates redundant `path.join` operations, improving code readability in common file-handling workflows.
-
-### glob()
-
-Provides standard `glob` behavior for cases where standard results are preferred.
+**`sweepDir()`** is designed as a **semantic alternative to `glob()`**, differentiating itself by returning full file paths. This eliminates redundant `path.join` operations, improving code readability in common file-handling workflows.
 
 ## Links
 
 ### Development Homepage:
 
-[https://github.com/alexstevovich/filesweep](https://github.com/alexstevovich/filesweep)
+[https://github.com/alexstevovich/sweepdir](https://github.com/alexstevovich/sweepdir)
 
-_This link might become filesweep-node in the future if conflicts arise._
+_This link might become sweepdir-node in the future if conflicts arise._
 
 ## License
 

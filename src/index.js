@@ -1,5 +1,5 @@
 /* *******************************************************
- * filesweep
+ * sweepdir
  *
  * @license
  *
@@ -21,18 +21,18 @@
  *
  * @meta
  *
- * package_name: filesweep
+ * package_name: sweepdir
  * file_name: src/index.js
  * purpose: Core functionality and exports combined.
  *
  * @system
  *
- * generated_on: 2025-03-12T20:09:58.203Z
+ * generated_on: 2025-03-15T02:00:34.327Z
  * certified_version: 1.0.0
  * file_uuid: b5117350-6317-4730-a01b-bd604126e859
- * file_size: 1709 bytes
- * file_hash: c4ef159475b72c71705ee64451b325e04fcd751e51d8135246c149e08c3ecf03
- * mast_hash: da4ba2bb160a1db02516c13707144c0098648cfc9cb3777259f7ef2ec773a6ca
+ * file_size: 1626 bytes
+ * file_hash: 82ddfa581810e9a9762d28e4ed551d01054d8df62b27194e67529fe6aea15ca3
+ * mast_hash: 8d44d88b38be12f1d6afa0335a6bb15cec6cc5abb079034d7584307318db6120
  * generated_by: preamble on npm!
  *
  * [Preamble Metadata]
@@ -40,11 +40,7 @@
 import path from 'path';
 import fg from 'fast-glob';
 
-export async function glob(patterns, options = {}) {
-    return fg(patterns, options);
-}
-
-export async function sweep(dir, patterns = '*', options = {}) {
+export async function sweepDir(dir, patterns = '*', options = {}) {
     const { ...restOptions } = options;
 
     const files = await fg(patterns, {
@@ -56,4 +52,4 @@ export async function sweep(dir, patterns = '*', options = {}) {
     return files.map((file) => path.join(dir, file));
 }
 
-export default sweep;
+export default sweepDir;
